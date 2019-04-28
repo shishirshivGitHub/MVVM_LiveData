@@ -5,6 +5,8 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -18,14 +20,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        RecyclerView recyclerView = findViewById(R.id.recylerViewId);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+
+        final NoteAdater adater = new NoteAdater();
+        recyclerView.setAdapter(adater);
+
         noteViewModel = ViewModelProviders.of(this).get(NoteViewModel.class);
 
         noteViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
             @Override
             public void onChanged(@Nullable List<Note> notes) {
-                // update the recycler view
-                Toast.makeText(MainActivity.this,"onChanged",Toast.LENGTH_LONG).show();
+                adater.setNotes(notes);
             }
         });
     }
+
 }
