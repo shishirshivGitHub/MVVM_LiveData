@@ -9,6 +9,7 @@ import android.arch.persistence.room.Update;
 
 import java.util.List;
 
+// Data Access Object may be abstract class or interface.
 @Dao
 public interface Note_Data_Access_Object {
 

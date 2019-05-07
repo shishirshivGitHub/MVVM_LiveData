@@ -59,7 +59,7 @@ public class NoteRepository {
 
         @Override
         protected Void doInBackground(Note... notes) {
-            noteDataAccessObject.insert(notes[0  ]);
+            noteDataAccessObject.update(notes[0]);
             return null;
         }
     }
@@ -73,7 +73,7 @@ public class NoteRepository {
 
         @Override
         protected Void doInBackground(Note... notes) {
-            noteDataAccessObject.insert(notes[0  ]);
+            noteDataAccessObject.delete(notes[0]);
             return null;
         }
     }
