@@ -16,6 +16,10 @@ import android.widget.Toast;
 
 import java.util.List;
 
+/**
+ *   This project is for the DEMO
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     private NoteViewModel noteViewModel;
