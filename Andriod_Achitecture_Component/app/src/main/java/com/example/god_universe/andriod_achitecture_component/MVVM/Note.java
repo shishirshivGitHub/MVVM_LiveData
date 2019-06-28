@@ -6,6 +6,7 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
 // Marks a class as an entity. This class will have a mapping SQLite table in the database.
+
 @Entity(tableName = "note_table")
 public class Note {
 

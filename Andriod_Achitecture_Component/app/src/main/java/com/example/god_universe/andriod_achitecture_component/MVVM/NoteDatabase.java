@@ -11,6 +11,8 @@ import android.support.annotation.NonNull;
 @Database(entities = {Note.class},version = 1)
 public abstract class NoteDatabase extends RoomDatabase {
 
+
+
     private static NoteDatabase instance;
 
     public abstract Note_Data_Access_Object note_data_access_object();

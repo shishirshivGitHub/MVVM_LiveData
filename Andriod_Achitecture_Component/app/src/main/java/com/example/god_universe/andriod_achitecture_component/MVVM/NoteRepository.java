@@ -7,6 +7,8 @@ import android.os.AsyncTask;
 import java.util.List;
 
 public class NoteRepository {
+
+
     private Note_Data_Access_Object noteDataAccessObject;
     private LiveData<List<Note>> allNotes;
 

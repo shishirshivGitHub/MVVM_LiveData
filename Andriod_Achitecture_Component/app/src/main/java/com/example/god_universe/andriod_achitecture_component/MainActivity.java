@@ -26,8 +26,6 @@ import java.util.List;
  *   - ServerCall
  *   - Dagger
  *   - MVVM
- *
- *
  */
 
 public class MainActivity extends AppCompatActivity {
