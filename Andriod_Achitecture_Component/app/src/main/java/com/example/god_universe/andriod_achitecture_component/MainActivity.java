@@ -12,12 +12,22 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import com.example.god_universe.andriod_achitecture_component.MVVM.Note;
+import com.example.god_universe.andriod_achitecture_component.MVVM.NoteAdater;
+import com.example.god_universe.andriod_achitecture_component.MVVM.NoteViewModel;
 
 import java.util.List;
 
 /**
  *   This project is for the DEMO
+ *
+ *   Have 4 branch
+ *   - ServerCall
+ *   - Dagger
+ *   - MVVM
+ *
+ *
  */
 
 public class MainActivity extends AppCompatActivity {
